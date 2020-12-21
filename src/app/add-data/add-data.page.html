@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>add-data</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-item>
+    <ion-label position="stacked">
+      NIK
+    </ion-label>
+    <ion-input type="number" [(ngModel)]="nik" placeholder="Masukkan NIK"></ion-input>
+  </ion-item>
+
+  
+  <ion-item>
+    <ion-label position="stacked">
+      Nama Pegawai
+    </ion-label>
+    <ion-input [(ngModel)]="nama_pegawai" placeholder="Masukkan nama pegawai"></ion-input>
+  </ion-item>
+
+  
+  <ion-item>
+    <ion-label position="stacked">
+      Jenis Kelamin
+    </ion-label>
+    <ion-select [(ngModel)]="jenis_kelamin">
+      <ion-select-option value="L">Laki -Laki</ion-select-option>
+      <ion-select-option value="P">Perempuan</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>
+      Tanggal Lahir
+    </ion-label>
+    <ion-datetime [(ngModel)]="tgl_lahir"></ion-datetime>
+  </ion-item>
+
+
+
+
+</ion-content>
+
+<ion-footer>
+  <button class="button-submit" (click)="save()">Submit</button>
+</ion-footer>

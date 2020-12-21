@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Pegawai 2020
+    </ion-title>
+    <ion-button slot="end" (click)="addDataClicked()">Add Data</ion-button>
+  </ion-toolbar>
+  <ion-searchbar [(ngModel)]="search_value"></ion-searchbar>
+</ion-header>
+
+<ion-content>
+  <div style="text-align: center;" *ngIf="!items">
+    <h4>No data availables.</h4>
+  </div>
+  <ion-list>
+    <ion-card  class="ion-padding" (click)="itemClicked()" *ngFor="let item of items">
+      <ion-card-title>{{item.nama_pegawai}} Test</ion-card-title>
+      <ion-card-subtitle>{{item.nik}}</ion-card-subtitle>
+    </ion-card>
+
+    <ion-card  class="ion-padding" (click)="itemClicked(1)">
+      <ion-card-title> Test</ion-card-title>
+      <ion-card-subtitle>1811</ion-card-subtitle>
+    </ion-card>
+  </ion-list>
+</ion-content>
